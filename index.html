@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chip Cost Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="model.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Chip Cost Predictor</h1>
+        <div class="inputs">
+            <p>Please enter the input values for the model you wish to run:</p>
+            <div class="inputFields">
+                <label>Product: <input name="Product" type="text" /></label>
+                <label>Type: <input name="Type" type="text" /></label>
+                <label>Release Date: <input name="Release Date" type="text" /></label>
+                <label>Process Size (nm): <input name="Process Size (nm)" type="number" /></label>
+                <label>TDP (W): <input name="TDP (W)" type="number" /></label>
+                <label>Die Size (mm^2): <input name="Die Size (mm^2)" type="number" /></label>
+                <label>Transistors (million): <input name="Transistors (million)" type="number" /></label>
+                <label>Freq (MHz): <input name="Freq (MHz)" type="number" /></label>
+                <label>Foundry: <input name="Foundry" type="text" /></label>
+                <label>Vendor: <input name="Vendor" type="text" /></label>
+            </div>
+        </div>
+        <div class="predict">
+            <button id="predictResult" onclick="runNeuralNetwork()">Run Prediction</button>
+        </div>
+        <div class="result">
+            <h3>Here is where your prediction will be shown:</h3>
+            <h4 id="prediction">Predicted Cost: </h4>
+        </div>
+    </div>
+</body>
+</html>
